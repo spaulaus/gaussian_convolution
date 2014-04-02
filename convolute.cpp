@@ -53,8 +53,8 @@ double AdaptiveSimpsons(const double &a, const double &b, // interval
 }
 
 int main(int argc, char* argv[]) {
-    for(double t = -10; t < 10; t+=0.25) {
+    for(double t = -10; t < 10; t+=0.1) {
         cout << t << " " << Gauss(t, 1.0) << " " << Gauss(t, 2.0) << " ";
-        cout << AdaptiveSimpsons(1e-6, 1e6, 1e-20, 30, t, 1.0, 2.0) << endl;
+        cout << AdaptiveSimpsons(-1e6, 1e6, 1e-18, 30, t, 1.0, 2.0) << endl;
     } //for (double t
 }
